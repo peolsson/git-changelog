@@ -34,6 +34,8 @@
             this.textBoxGitRepositoryPath = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBoxJiraSettings = new System.Windows.Forms.GroupBox();
+            this.textBoxJiraMatchPrefix = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.comboBoxJiraProjects = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxJiraPassword = new System.Windows.Forms.TextBox();
@@ -44,8 +46,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.buttonOk = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
-            this.textBoxJiraMatchPrefix = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.groupBoxGitSettings.SuspendLayout();
             this.groupBoxJiraSettings.SuspendLayout();
             this.SuspendLayout();
@@ -73,6 +73,7 @@
             this.buttonGitPathDialog.TabIndex = 2;
             this.buttonGitPathDialog.Text = "...";
             this.buttonGitPathDialog.UseVisualStyleBackColor = true;
+            this.buttonGitPathDialog.Click += new System.EventHandler(this.buttonGitPathDialog_Click);
             // 
             // textBoxGitRepositoryPath
             // 
@@ -113,6 +114,24 @@
             this.groupBoxJiraSettings.TabIndex = 1;
             this.groupBoxJiraSettings.TabStop = false;
             this.groupBoxJiraSettings.Text = "Jira Settings";
+            // 
+            // textBoxJiraMatchPrefix
+            // 
+            this.textBoxJiraMatchPrefix.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxJiraMatchPrefix.Location = new System.Drawing.Point(143, 135);
+            this.textBoxJiraMatchPrefix.Name = "textBoxJiraMatchPrefix";
+            this.textBoxJiraMatchPrefix.Size = new System.Drawing.Size(540, 22);
+            this.textBoxJiraMatchPrefix.TabIndex = 12;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 138);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(85, 17);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Match Prefix";
             // 
             // comboBoxJiraProjects
             // 
@@ -211,24 +230,6 @@
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
-            // 
-            // textBoxJiraMatchPrefix
-            // 
-            this.textBoxJiraMatchPrefix.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxJiraMatchPrefix.Location = new System.Drawing.Point(143, 135);
-            this.textBoxJiraMatchPrefix.Name = "textBoxJiraMatchPrefix";
-            this.textBoxJiraMatchPrefix.Size = new System.Drawing.Size(540, 22);
-            this.textBoxJiraMatchPrefix.TabIndex = 12;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 138);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 17);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Match Prefix";
             // 
             // SettingsDialog
             // 

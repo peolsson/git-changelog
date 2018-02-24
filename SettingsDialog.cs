@@ -83,5 +83,20 @@ namespace GitChangelog
                 }
             }
         }
+
+        private void buttonGitPathDialog_Click(object sender, EventArgs e)
+        {
+            using (var fbd = new FolderBrowserDialog())
+            {
+                fbd.SelectedPath = textBoxGitRepositoryPath.Text;
+
+                DialogResult result = fbd.ShowDialog(this);
+
+                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                {
+                    textBoxGitRepositoryPath.Text = fbd.SelectedPath;
+                }
+            }
+        }
     }
 }
