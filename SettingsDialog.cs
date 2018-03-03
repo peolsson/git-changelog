@@ -25,7 +25,12 @@ namespace GitChangelog
             textBoxJiraHostname.Text = Properties.Settings.Default.JiraHost;
             textBoxJiraUsername.Text = Properties.Settings.Default.JiraUsername;
             textBoxJiraPassword.Text = Properties.Settings.Default.JiraPassword;
-            comboBoxJiraProjects.Items.Add(Properties.Settings.Default.JiraProject);
+
+            if (Properties.Settings.Default.JiraProject != null)
+            {
+                comboBoxJiraProjects.Items.Add(Properties.Settings.Default.JiraProject);
+            }
+
             textBoxJiraMatchPrefix.Text = Properties.Settings.Default.JiraMatchPrefix;
             comboBoxJiraProjects.SelectedIndex = 0;
 
