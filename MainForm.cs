@@ -146,7 +146,7 @@ namespace GitChangelog
             }
 
             result.subject = result.subject.Trim();
-            result.body = result.body.Trim();
+            result.body = !string.IsNullOrWhiteSpace(result.body) ? result.body.Trim() : string.Empty;
 
             return result;
         }
