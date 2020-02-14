@@ -270,7 +270,7 @@ namespace GitChangelog
                     {
                         var message = FilterMessage(c.Message);
 
-                        AppendStyledText(textChangelog.ForeColor, textChangelog.BackColor, FontStyle.Bold | FontStyle.Italic, null, false, message.subject);
+                        AppendStyledText(textChangelog.ForeColor, textChangelog.BackColor, FontStyle.Bold | FontStyle.Italic, null, false, "[" + c.Author.When.ToString("yyyy-MM-dd HH:mm:ss") + "] " + message.subject);
                         textChangelog.AppendText(Environment.NewLine);
 
                         if (message.body != null && message.body.Length > 0)
